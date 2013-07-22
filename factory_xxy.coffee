@@ -22,7 +22,7 @@ Arr =
     
 FactoryXXY =
   build: (obj) -> 
-    buildUnique(obj, 0)
+    @buildUnique(obj, 0)
     
   buildUnique: (obj, iter) ->
     object = {}
@@ -37,7 +37,6 @@ FactoryXXY =
     return object
     
   buildMany: (obj, num) ->
-    console.log obj
     toReturn = []
     i = 0
     while i < num
