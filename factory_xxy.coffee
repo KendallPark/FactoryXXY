@@ -8,10 +8,18 @@ Int =
 Str =
   unique: (base) ->
     return (iter) -> base + iter
-  
+
   random: (chars) ->
     Math.random().toString(36).substring(2, chars + 2)
+    
+Arr = 
+  unique: (array) ->
+    return (iter) -> array[iter % array.length]
 
+  random: (array) ->
+    array[Math.floor(Math.random()*array.length)]
+
+    
 FactoryXXY =
   build: (obj) -> 
     buildUnique(obj, 0)
@@ -24,7 +32,7 @@ FactoryXXY =
         value = value(iter)
       else if value instanceof Array
       else if value instanceof Object
-        value = @buildUnique(value, iter*10)
+        value = @buildUnique(value, 0)
       object[key] = value
     return object
     
