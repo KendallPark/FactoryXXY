@@ -20,7 +20,7 @@ A coffeescript fixture factory similar to FactoryGirl and FactoryBoy
     console.log FactoryXXY.build(girl)
     console.log FactoryXXY.buildMany(girl, 3)
 
-Outputs something like:
+Last line outputs something like:
 
     [
        {
