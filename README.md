@@ -18,3 +18,8 @@ A coffeescript fixture factory similar to FactoryGirl and FactoryBoy
         
     console.log FactoryXXY.build(girl)
     console.log FactoryXXY.buildMany(girl, 3)
+
+### TODO
+- Unique doesn't actually guarantee a unique id. Should make a hash to take care of that.
+- Need some way to generate tree-like data. 
+- Support for bi-directional binding
